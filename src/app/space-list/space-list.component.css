@@ -1,0 +1,131 @@
+h1{
+    font-size: 26px;
+    padding: 20px 0 20px;
+    text-align: left;
+}
+.container{
+    background: #f2f2f2;
+    max-width: 1440px;
+}
+.flex-row {
+    display: flex;
+}
+img{
+    max-width: 100%;
+}
+.flex-row .filter-wrapper {
+    width: 20%;
+    background: #fff;
+    margin-right: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.flex-row .program-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 83%;
+}
+.flex-row .program-list .list {
+    width: 25%;
+    padding: 0 1%;
+    margin-bottom: 20px;
+}
+.flex-row .program-list .list .block {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 380px;
+}
+.flex-row .program-list .list .block img{
+    padding: 20px;
+}
+.flex-row .program-list .list .block:hover{
+    box-shadow: 0px 0px 11px #7d7d7d85;
+}
+.flex-row .filter-wrapper h2 {
+    font-size: 22px;
+    margin: 0 0 15px;
+    text-align: left;
+}    
+.flex-row .filter-wrapper .filter h3 {
+    font-size: 16px;
+    margin: 0 0 15px;
+    text-align: center;
+    border-bottom: 1px solid #999;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+.flex-row .filter-wrapper .filter {}
+.flex-row .filter-wrapper .filter ul {
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+}
+.flex-row .filter-wrapper .filter ul li {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+}
+.flex-row .filter-wrapper .filter ul li span{
+    background: #c5e09b;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+}
+.flex-row .filter-wrapper .filter ul li span:hover{
+    background: #7bba03;
+}
+.flex-row .program-list .list .block h3 {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 22px;
+    color: #673AB7;
+}
+.flex-row .program-list .list .block p.text-bold {
+    font-weight: 600;
+    margin: 0 0 5px;
+    color: #333;
+    font-size: 14px;
+}
+.flex-row .program-list .list .block p.text-bold span {
+    color: #666;
+    font-weight: normal;
+}
+.copyright {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.copyright span {
+    font-weight: normal;
+}
+
+@media screen and (max-width:1024px){
+.flex-row .program-list .list     {
+    width: 50%;
+}
+}
+
+@media screen and (max-width:700px){
+.flex-row .program-list .list     {
+    width: 100%;
+}
+.flex-row{
+    display: block;
+}
+.flex-row .filter-wrapper{
+    width: 100%;
+    margin:0 0 25px;
+}
+.flex-row .program-list{
+    width: 100%;
+    text-align: center;
+}
+}

@@ -1,0 +1,47 @@
+<section class="container">
+    <h1>SpaceX Launch Programs</h1>
+    <div class="flex-row">
+        <div class="filter-wrapper">
+            <h2>Filters</h2>
+            <div class="filter">
+                <h3>Launch Year</h3>
+                <ul>
+                    <li (click)='clearAll()'><span>All</span></li>
+                    <li *ngFor="let y of years" (click)="updateValues('year',y)"><span>{{y}}</span></li>
+                   
+                </ul>
+            </div>
+            <div class="filter">
+                <h3>Successful Launch</h3>
+                <ul>
+                    <li (click)="updateValues('launch',true)"><span>True</span></li>
+                    <li (click)="updateValues('launch',false)"><span>False</span></li>                    
+                </ul>
+            </div>
+            <div class="filter">
+                <h3>Successful Landing</h3>
+                <ul>
+                    <li (click)="updateValues('land',true)"><span>True</span></li>
+                    <li (click)="updateValues('land',false)"><span>False</span></li> 
+                </ul>
+            </div>
+        </div>
+        <div class="program-list">
+            <h2 *ngIf="!listdata$">test {{listdata$ | async | json }}</h2>
+            <div class="list" *ngFor="let item of listdata$ | async">
+                <div class="block">
+                    <img src="{{item?.links?.mission_patch_small}}" alt="" />
+                    <h3>{{ item?.mission_name }}</h3>
+                    <p class="text-bold" *ngIf="item?.mission_id[0]">Mission Ids: <span>{{ item?.mission_id[0] }}</span></p>
+                    <p class="text-bold" *ngIf="item?.launch_year">Launch Year : <span>{{item?.launch_year}}</span></p>
+                    <p class="text-bold" *ngIf="item?.launch_success">Successful Launch : <span>{{item?.launch_success}}</span></p>
+                    <p class="text-bold" *ngIf="item?.rocket?.first_stage?.cores[0]?.land_success">Successful landing : <span>{{item?.rocket?.first_stage?.cores[0]?.land_success}}</span></p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <div class="copyright">
+        Developed by: <span>Anup Kumar</span>
+    </div>
+</section>

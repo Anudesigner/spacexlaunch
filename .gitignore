@@ -1,0 +1,54 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+#Client wise config files ignore
+package.json
+angular.json
+firebase.json
+.firebaserc
+tsconfig.json
+src/environments
+src/sitemap.xml
+src/tsconfig.server.json
+src/tsconfig.app-ssr.json
+src/tsconfig.app.json
+src/manifest.json
+.gitlab-ci.yml
+.gitmodules
+# compiled output
+/dist
+/functions/dist
+/tmp
+/out-tsc
+/public
+# dependencies
+/node_modules
+/functions/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
